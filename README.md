@@ -1,3 +1,3 @@
 [![EditorConfig](https://github.com/yuarkhipenko/grid-template/actions/workflows/EditorConfig.yml/badge.svg?branch=master)](https://github.com/yuarkhipenko/grid-template/actions/workflows/EditorConfig.yml)
 
-[![HTML CSS valid](https://github.com/yuarkhipenko/grid-template/actions/workflows/HTML5Validator.yml/badge.svg?branch=master)](https://github.com/yuarkhipenko/grid-template/actions/workflows/HTML5Validator.yml)git
+[![HTML CSS valid](https://github.com/yuarkhipenko/grid-template/actions/workflows/HTML5Validator.yml/badge.svg?branch=master)](https://github.com/yuarkhipenko/grid-template/actions/workflows/HTML5Validator.yml)
