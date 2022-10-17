@@ -23,5 +23,10 @@
     padding: $gap-sm;
     font-size: 1.125rem;
     letter-spacing: 0.088em;
+
+    &:hover,
+    &:focus {
+     color: $color-accent; 
+    }
   }
 }

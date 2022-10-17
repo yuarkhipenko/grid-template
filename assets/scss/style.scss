@@ -2,3 +2,43 @@
 
 @use "common";
 @use "components/header";
+@use "components/sections/skills";
+
+@media (max-widht: 992px) {
+  .btn--light {
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+  }
+
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a6 a6" "a7 a8 a6" "a7 a9 a9";
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-widht: 768px) {
+  .btn--light {
+    width: 170px;
+    height: 40px;
+  }
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-widht: 576px) {
+  .skills__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    margin-bottom: 20px;
+  }
+}
+@media (max-higth: 600px) {
+  .skills__container {
+    grid-auto-rows: calc(230px - 13.3333333333333px);
+  }
+}
