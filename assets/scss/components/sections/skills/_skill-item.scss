@@ -6,12 +6,19 @@
   overflow: hidden;
 
   &__title {
-    @include abs-position;
     z-index: 1;
     margin: 0;
-
-    font-size: 1.25rem;
     letter-spacing: 0.1em;
+        
+    @include lg-min {
+      font-size: 1.25rem;
+    }
+
+    @include lg {
+      font-size: 1.125rem;
+    } 
+
+    @include abs-position;
   }
 
   &__link {
