@@ -73,7 +73,7 @@
       display: grid;
       gap: $gap;
       width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       justify-content: end;
     }
 
@@ -90,13 +90,15 @@
   }
 
   &__item {
-    margin: $gap $gap-sm;
+    @include md {
+      margin: $gap $gap-sm;
+    }
   }
 
   &__link {
     display: block;
     font-size: 1.125rem;
-    letter-spacing: 0.088em;
+    letter-spacing: 0.1em;
     transition: color 0.25s;
 
     @include md-min {
