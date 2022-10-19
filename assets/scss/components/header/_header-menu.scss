@@ -8,12 +8,16 @@
   top: 0;
   right: 0;
 
+  @include md {
+    @include box-shadow;
+    background-color: rgba($color-gray-dark, 0.25);
+  }
+
   &__container {
     display: grid;
     gap: $gap;
     grid-template-columns: auto 1fr;
     align-items: center;
-
     @extend %container;
   }
 }

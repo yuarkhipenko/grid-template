@@ -6,27 +6,110 @@
   justify-items: end;
 
   &__btn {
-    display: none;
+    width: 30px;
+    height: 22.5px;
+    position: relative;
+    margin: $gap 0;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    &-row {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: $color-light;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 9px;
+      }
+
+      &:nth-child(4) {
+        top: 18px;
+      }
+    }
+
+    &--active span {
+      &:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+
+    @include md-min {
+      display: none;
+    }
   }
 
   &__list {
-    @include unlist(0 (-$gap-sm) 0 0);
-    display: grid;
-    gap: $gap;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
-    justify-content: end;
+    @include md-min {
+      @include unlist(0 (-$gap-sm) 0 0);
+      display: grid;
+      gap: $gap;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+      justify-content: end;
+    }
+
+    @include md {
+      @include unlist;
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: $gap;
+      display: block;
+      background-color: rgba($color-gray-dark, 0.95);
+      @include box-shadow;
+    }
+  }
+
+  &__item {
+    margin: $gap $gap-sm;
   }
 
   &__link {
     display: block;
-    padding: $gap-sm;
     font-size: 1.125rem;
     letter-spacing: 0.088em;
+    transition: color 0.25s;
+
+    @include md-min {
+      padding: $gap $gap-sm;
+    }
+
+    @include md {
+      padding: $gap-sm $gap;
+    }
 
     &:hover,
     &:focus {
-     color: $color-accent; 
+      color: $color-accent;
     }
   }
 }
