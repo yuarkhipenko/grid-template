@@ -2,30 +2,120 @@
 @use "../../mixins" as *;
 
 .about {
-@include lg-min {
-  padding-top: 100px;
-  padding-bottom: 100px;
-
-}
   letter-spacing: 0.055em;
-  background-color: #e5e5e5;
-  
+  background-color: $color-gray-light;
+
+  @include lg-min {
+    padding-top: $gap-x5;
+    padding-bottom: $gap-x5;
+  }
+
+  @include lg-md {
+    padding-top: $gap-x4;
+    padding-bottom: $gap-x4;
+  }
+
+  @include md {
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x3;
+  }
+
   &__container {
+    display: grid;
+
+    @extend %container;
 
     @include lg-min {
-      gap: 100px;
-      max-width: $ul;
-      margin: auto;
-      padding-right: $gap;
-      padding-left: $gap;
+      gap: $gap-x5;
       grid-template-columns: 1fr 271px;
     }
-    display: grid;
+
+    @include lg-md {
+      gap: $gap-x2;
+      grid-template-columns: 1fr 271px;
+    }
+
+    @include md-sm {
+      gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+
+    @include sm {
+      gap: $gap;
+      grid-template-columns: 1fr;
+    }
   }
 
   h2 {
     margin-top: 0;
-    
+    @include lg-min {
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+
+    @include lg-md {
+      margin-bottom: 2.625rem;
+      font-size: 2rem;
+    }
+
+    @include md-sm {
+      margin-bottom: 2.25rem;
+      font-size: 1.5rem;
+    }
+
+    @include md {
+      text-align: center;
+    }
   }
 
+  &__content {
+    p {
+      @include lg-min {
+        font-size: 1.125rem;
+      }
+    }
+    p:first-of-type {
+      position: relative;
+      margin-top: -5px;
+    }
+    p:first-of-type::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 2px;
+      height: 200px;
+      background-color: rgba($color-gray, 0.1);
+
+      @include lg-min {
+        right: -50px;
+      }
+
+      @include lg-md {
+        right: -20px;
+      }
+
+      @include md-sm {
+        right: -10px;
+      }
+
+      @include sm {
+        display: none;
+      }
+    }
+
+    p:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+
+    img {
+       max-width: 100%;
+       max-height: 480px;
+    }
+  }
 }
