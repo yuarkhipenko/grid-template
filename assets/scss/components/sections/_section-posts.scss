@@ -1,2 +1,125 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
+
+.posts {
+  @include lg-min {
+    @include section-lg-min;
+  }
+
+  @include lg-md {
+    @include section-lg-md;
+  }
+
+  @include md {
+    @include section-md;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  h2 {
+    margin-top: 0;
+    @include lg-min {
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+
+    @include lg-md {
+      margin-bottom: 2.625rem;
+      font-size: 2rem;
+    }
+
+    @include md-sm {
+      margin-bottom: 2.25rem;
+      font-size: 1.5rem;
+    }
+
+    @include md {
+      text-align: center;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    padding-bottom: $gap;
+    gap: $gap;
+    @include lg-min {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
+    }
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
+    }
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+    }
+
+    @include sm {
+      grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+    }
+  }
+}
+
+$count: 6;
+
+@for $i from 1 through $count {
+  .post-item:nth-of-type(#{$i}) {
+    grid-area: p#{$i};
+  }
+}
+
+.post-item {
+  background-color: #f2f2f2;
+  transition: background-color 0.5s;
+
+  &__link {
+    display: grid;
+    overflow: hidden;
+    height: 100%;
+    grid-template-rows: 300px 1fr;
+  }
+
+  &__image {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background-color: #2d3651;
+  }
+  &__image img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  &__caption {
+    display: grid;
+    align-content: center;
+    padding: 20px;
+  }
+  h3 {
+    text-align: center;
+    transition: color 0.5s;
+  }
+}
+.post-item:hover {
+  background-color: #d8d8d8;
+
+  .post-item__image img {
+    transform: scale(1.1);
+  }
+
+  h3,
+  p {
+    color: $color-primary;
+  }
+}
+
+.posts__actions {
+  @include sm-min {
+    display: flex;
+    justify-content: center;
+  }
+}

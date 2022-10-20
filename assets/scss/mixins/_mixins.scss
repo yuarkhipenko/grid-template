@@ -51,3 +51,19 @@
 @mixin box-shadow {
   box-shadow: -3px 3px 20px -10px darken($color-gray-dark, 40%);
 }
+
+@mixin section-lg-min {
+  padding-top: $gap-x5;
+  padding-bottom: $gap-x5;
+}
+
+@mixin section-lg-md {
+  padding-top: $gap-x4;
+  padding-bottom: $gap-x4;
+}
+
+@mixin section-md {
+  padding-top: $gap-x3;
+  padding-bottom: $gap-x3;
+  
+}

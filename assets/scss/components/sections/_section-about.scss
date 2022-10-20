@@ -6,18 +6,15 @@
   background-color: $color-gray-light;
 
   @include lg-min {
-    padding-top: $gap-x5;
-    padding-bottom: $gap-x5;
+    @include section-lg-min;
   }
 
   @include lg-md {
-    padding-top: $gap-x4;
-    padding-bottom: $gap-x4;
+   @include section-lg-md;
   }
 
   @include md {
-    padding-top: $gap-x3;
-    padding-bottom: $gap-x3;
+   @include section-md;
   }
 
   &__container {
