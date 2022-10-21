@@ -41,7 +41,12 @@
   .form-item__input::placeholder {
     color: $color-gray;
   }
-     
+
+  .form-item__input:hover::placeholder,
+  .form-item__input:focus::placeholder {
+    color: #8c9bab;
+  }
+
   .form-item__input:hover,
   .form-item__input:focus {
     border-color: rgba($color-light, 0.15);
@@ -55,6 +60,7 @@
     border-color: rgba($color-light, 0);
     border-bottom-color: rgba($color-light, 0.2);
     background-color: rgba($color-light, 0.1);
+    transition: 0.5s;
   }
 
   .btn--primary:hover,
