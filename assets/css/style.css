@@ -619,7 +619,7 @@ p {
 
   gap: 20px;
 }
-.form-item__input {
+.form .form-item__input {
   display: block;
 
   width: 100%;
@@ -632,15 +632,50 @@ p {
           transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.15em;
 
-  color: #637588;
+  color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
 
   font-size: 1.125rem;
 }
-.form-item__input:hover,
-.form-item__input:focus {
+.form .form-item__input::-webkit-input-placeholder {
+  color: #637588;
+}
+.form .form-item__input::-moz-placeholder {
+  color: #637588;
+}
+.form .form-item__input:-ms-input-placeholder {
+  color: #637588;
+}
+.form .form-item__input::-ms-input-placeholder {
+  color: #637588;
+}
+.form .form-item__input::placeholder {
+  color: #637588;
+}
+.form .form-item__input:hover::-webkit-input-placeholder,
+.form .form-item__input:focus::-webkit-input-placeholder {
+  color: #8c9bab;
+}
+.form .form-item__input:hover::-moz-placeholder,
+.form .form-item__input:focus::-moz-placeholder {
+  color: #8c9bab;
+}
+.form .form-item__input:hover:-ms-input-placeholder,
+.form .form-item__input:focus:-ms-input-placeholder {
+  color: #8c9bab;
+}
+.form .form-item__input:hover::-ms-input-placeholder,
+.form .form-item__input:focus::-ms-input-placeholder {
+  color: #8c9bab;
+}
+.form .form-item__input:hover::placeholder,
+.form .form-item__input:focus::placeholder {
+  color: #8c9bab;
+}
+.form .form-item__input:hover,
+.form .form-item__input:focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
