@@ -39,11 +39,12 @@
       text-align: center;
     }
   }
+
   h3 {
     letter-spacing: 0.05em;
-      color: $color-gray;
-      font-size: 1.125rem;
-      font-family: "Roboto Slab", serif;
+    color: $color-gray;
+    font-size: 1.125rem;
+    font-family: "Roboto Slab", serif;
   }
 
   &__grid {
@@ -94,6 +95,7 @@ $count: 6;
     justify-content: center;
     background-color: #2d3651;
   }
+
   &__image img {
     width: 100%;
     object-fit: cover;
@@ -105,7 +107,9 @@ $count: 6;
     align-content: center;
     padding: 20px;
   }
-  h3 {
+  
+  h3,
+  p {
     text-align: center;
     transition: color 0.5s;
   }
@@ -113,13 +117,13 @@ $count: 6;
 .post-item:hover {
   background-color: #d8d8d8;
 
-  .post-item__image img {
-    transform: scale(1.1);
-  }
-
   h3,
   p {
     color: $color-primary;
+  }
+
+  .post-item__image img {
+    transform: scale(1.1);
   }
 }
 
