@@ -654,26 +654,6 @@ p {
 .form .form-item__input::placeholder {
   color: #637588;
 }
-.form .form-item__input:hover::-webkit-input-placeholder,
-.form .form-item__input:focus::-webkit-input-placeholder {
-  color: #8c9bab;
-}
-.form .form-item__input:hover::-moz-placeholder,
-.form .form-item__input:focus::-moz-placeholder {
-  color: #8c9bab;
-}
-.form .form-item__input:hover:-ms-input-placeholder,
-.form .form-item__input:focus:-ms-input-placeholder {
-  color: #8c9bab;
-}
-.form .form-item__input:hover::-ms-input-placeholder,
-.form .form-item__input:focus::-ms-input-placeholder {
-  color: #8c9bab;
-}
-.form .form-item__input:hover::placeholder,
-.form .form-item__input:focus::placeholder {
-  color: #8c9bab;
-}
 .form .form-item__input:hover,
 .form .form-item__input:focus {
   border-color: rgba(255, 255, 255, 0.15);
