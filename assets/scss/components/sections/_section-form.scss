@@ -23,7 +23,7 @@
     }
   }
 
-  .form-item__input {
+  &-item__input {
     display: block;
     width: 100%;
     height: $gap-x3;
@@ -36,19 +36,19 @@
     border-bottom-color: rgba($color-light, 0.25);
     background-color: rgba($color-light, 0.05);
     transition: background-color 0.5s, border-color 0.5s;
+    outline: none;
   }
 
-  .form-item__input::placeholder {
+  &-item__input::placeholder {
     color: $color-gray;
   }
-
-  .form-item__input:hover::placeholder,
-  .form-item__input:focus::placeholder {
+  &-item__input:hover::placeholder,
+  &-item__input:focus::placeholder {
     color: #8c9bab;
   }
 
-  .form-item__input:hover,
-  .form-item__input:focus {
+  &-item__input:hover,
+  &-item__input:focus {
     border-color: rgba($color-light, 0.15);
     border-bottom-color: $color-light;
     background-color: rgba($color-light, 0.15);
@@ -60,7 +60,8 @@
     border-color: rgba($color-light, 0);
     border-bottom-color: rgba($color-light, 0.2);
     background-color: rgba($color-light, 0.1);
-    transition: 0.5s;
+    transition: background-color 0.5s, border-color 0.5s;
+    outline: none;
   }
 
   .btn--primary:hover,

@@ -69,7 +69,7 @@
 
   &__list {
     @include md-min {
-      @include unlist(0 (-$gap-sm) 0 0);
+      @include unlist(0 ($gap-sm) 0 0);
       display: grid;
       gap: $gap;
       width: 100%;
@@ -79,11 +79,10 @@
 
     @include md {
       @include unlist;
-      display: none;
       position: absolute;
       top: 100%;
       right: $gap;
-      display: block;
+      display: none;
       background-color: rgba($color-gray-dark, 0.95);
       @include box-shadow;
     }

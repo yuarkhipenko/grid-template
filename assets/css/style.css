@@ -619,7 +619,7 @@ p {
 
   gap: 20px;
 }
-.form .form-item__input {
+.form-item__input {
   display: block;
 
   width: 100%;
@@ -635,47 +635,48 @@ p {
   color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
+  outline: none;
   background-color: rgba(255, 255, 255, 0.05);
 
   font-size: 1.125rem;
 }
-.form .form-item__input::-webkit-input-placeholder {
+.form-item__input::-webkit-input-placeholder {
   color: #637588;
 }
-.form .form-item__input::-moz-placeholder {
+.form-item__input::-moz-placeholder {
   color: #637588;
 }
-.form .form-item__input:-ms-input-placeholder {
+.form-item__input:-ms-input-placeholder {
   color: #637588;
 }
-.form .form-item__input::-ms-input-placeholder {
+.form-item__input::-ms-input-placeholder {
   color: #637588;
 }
-.form .form-item__input::placeholder {
+.form-item__input::placeholder {
   color: #637588;
 }
-.form .form-item__input:hover::-webkit-input-placeholder,
-.form .form-item__input:focus::-webkit-input-placeholder {
+.form-item__input:hover::-webkit-input-placeholder,
+.form-item__input:focus::-webkit-input-placeholder {
   color: #8c9bab;
 }
-.form .form-item__input:hover::-moz-placeholder,
-.form .form-item__input:focus::-moz-placeholder {
+.form-item__input:hover::-moz-placeholder,
+.form-item__input:focus::-moz-placeholder {
   color: #8c9bab;
 }
-.form .form-item__input:hover:-ms-input-placeholder,
-.form .form-item__input:focus:-ms-input-placeholder {
+.form-item__input:hover:-ms-input-placeholder,
+.form-item__input:focus:-ms-input-placeholder {
   color: #8c9bab;
 }
-.form .form-item__input:hover::-ms-input-placeholder,
-.form .form-item__input:focus::-ms-input-placeholder {
+.form-item__input:hover::-ms-input-placeholder,
+.form-item__input:focus::-ms-input-placeholder {
   color: #8c9bab;
 }
-.form .form-item__input:hover::placeholder,
-.form .form-item__input:focus::placeholder {
+.form-item__input:hover::placeholder,
+.form-item__input:focus::placeholder {
   color: #8c9bab;
 }
-.form .form-item__input:hover,
-.form .form-item__input:focus {
+.form-item__input:hover,
+.form-item__input:focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
@@ -683,13 +684,14 @@ p {
 .form .btn--primary {
   width: 100%;
 
-  -webkit-transition: 0.5s;
-       -o-transition: 0.5s;
-          transition: 0.5s;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+       -o-transition: background-color 0.5s, border-color 0.5s;
+          transition: background-color 0.5s, border-color 0.5s;
 
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.2);
+  outline: none;
   background-color: rgba(255, 255, 255, 0.1);
 }
 .form .btn--primary:hover,
@@ -905,7 +907,7 @@ p {
     justify-content: end;
 
     width: 100%;
-    margin: 0 -10px 0 0;
+    margin: 0 10px 0 0;
     padding: 0;
 
     list-style: none;
@@ -1045,7 +1047,6 @@ p {
     right: 20px;
 
     display: none;
-    display: block;
 
     margin: 0;
     padding: 0;
