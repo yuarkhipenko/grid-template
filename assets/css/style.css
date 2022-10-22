@@ -907,7 +907,7 @@ p {
     justify-content: end;
 
     width: 100%;
-    margin: 0 10px 0 0;
+    margin: 0 -10px 0 0;
     padding: 0;
 
     list-style: none;
